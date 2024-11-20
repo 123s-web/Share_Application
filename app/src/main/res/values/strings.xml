@@ -1,3 +1,13 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">ListViewTest</string>
+    <string name="string_1">书架</string>
+    <string name="string_2">历史</string>
+    <string name="string_3">漫画</string>
+    <string name="string_4">搜索</string>
+    <string name="string_5">切换列表形式</string>
+    <string name="string_6">连载提醒</string>
+    <string name="string_7">导入书架</string>
+    <string name="string_8">搜索</string>
+    <string name="string_9">请输入书名或者作者名</string>
+    <string name="string_10">斗罗大陆</string>
 </resources>

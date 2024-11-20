@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Content">
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button_back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="200dp"
+            android:background="@drawable/back" />
+
+        <Button
+            android:id="@+id/button_download"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/download" />
+
+        <Button
+            android:id="@+id/button_repost"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/repost" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- 空白区域，填充顶部空间 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <!-- 底部的按钮布局 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="bottom">
+
+            <Button
+                android:id="@+id/button_directory"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="100dp"
+                android:background="@drawable/directory" />
+
+            <Button
+                android:id="@+id/button_night"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="100dp"
+                android:background="@drawable/night" />
+
+            <Button
+                android:id="@+id/button_set"
+                android:layout_width="32dp"
+                android:layout_height="30dp"
+
+                android:background="@drawable/set" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
+
+
+
+
