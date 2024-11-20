@@ -1,26 +1,46 @@
-<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="16dp">
+    android:layout_height="match_parent">
 
-    <!-- 示例的章节标题 -->
     <TextView
         android:id="@+id/chapterTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="章节标题23"
         android:textSize="24sp"
         android:textStyle="bold"
         android:layout_centerHorizontal="true" />
 
-    <!-- 小说正文内容 -->
     <TextView
         android:id="@+id/chapterContent"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/chapterTitle"
-        android:text="小说内容..."
         android:textSize="16sp"
         android:paddingTop="16dp" />
+
+    <Button
+        android:id="@+id/prevChapterButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="上一章"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:id="@+id/nextChapterButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="下一章"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true" />
+
+    <!-- 插入数据的按钮 -->
+    <Button
+        android:id="@+id/insertDataButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="插入数据"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp" />
 </RelativeLayout>
