@@ -1,6 +1,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <!-- 添加访问外部存储的权限 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!-- 如果目标版本为 Android 11 及以上，并且需要访问所有文件，可使用以下权限 -->
+    <!-- <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" /> -->
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -11,15 +16,16 @@
         android:theme="@style/AppTheme"
         tools:ignore="ExtraText">
 
+        <!-- Content Activity 声明 -->
         <activity
             android:name=".Content"
-            android:exported="false" />
+            android:exported="true" /> <!-- 如果应用内使用，设置为 true 或 false 均可 -->
 
         <meta-data
             android:name="com.google.android.actions"
             android:resource="@anim/fade_in" />
 
-
+        <!-- SplashActivity 声明 -->
         <activity
             android:name=".SplashActivity"
             android:exported="true"
@@ -31,13 +37,15 @@
             </intent-filter>
         </activity>
 
+        <!-- BookShelf Activity 声明 -->
         <activity
             android:name=".BookShelf"
             android:exported="true" />
 
-        <activity android:name=".HistoryActivity"
-            android:exported="true"/>
-
+        <!-- HistoryActivity 声明 -->
+        <activity
+            android:name=".HistoryActivity"
+            android:exported="true" />
     </application>
 
 </manifest>

@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-
     <LinearLayout
         android:id="@+id/main"
         android:layout_width="match_parent"
@@ -13,242 +12,65 @@
         android:orientation="vertical"
         tools:context=".BookShelf">
 
+        <!-- 按钮组 -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/button_1"
+                android:id="@+id/button_bookshelf"
                 android:layout_width="30dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="30dp"
-                android:layout_marginEnd="40dp"
+                android:layout_marginEnd="4dp"
                 android:background="#00000000"
                 android:text="@string/string_1"
                 android:textColor="@color/black"
                 tools:ignore="MissingConstraints,RtlHardcoded,RtlSymmetry" />
-
             <Button
-                android:id="@+id/button_2"
+                android:id="@+id/button_history"
                 android:layout_width="30dp"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="15dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="4dp"
                 android:background="#00000000"
                 android:text="@string/string_2"
                 android:textColor="@color/black"
                 tools:ignore="MissingConstraints" />
-
             <Button
-                android:id="@+id/button_3"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:id="@+id/button_cartoon"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
                 android:layout_marginEnd="80dp"
                 android:background="#00000000"
                 android:text="@string/string_3"
                 android:textColor="@color/black"
                 tools:ignore="MissingConstraints" />
-
-            <!--<EditText
-                android:id="@+id/edit_text"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="4"
-                android:hint="@string/string_9" />-->
-
             <Button
-                android:id="@+id/button_4"
+                android:id="@+id/button_search"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:background="@drawable/search"
                 android:textColor="@color/black"
                 tools:ignore="MissingConstraints" />
+
+            <Button
+                android:id="@+id/button_import_txt"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="12dp"
+                android:background="@drawable/add"
+                android:textColor="@color/black" />
+
         </LinearLayout>
-        <LinearLayout
+        <!-- RecyclerView 用于显示书籍 -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/book_recycler_view"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <Button
-                android:id="@+id/button_5"
-                android:layout_width="0dp"
-                android:layout_height="150dp"
-                android:layout_weight="1"
-                android:background="@drawable/picture_2"
-                android:drawablePadding="16dp"
-                android:gravity="bottom|center_horizontal"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="30dp"
-                android:layout_marginBottom="30dp"
-                android:text="@string/string_10"
-                android:textSize="12sp" />
-            <Button
-                android:id="@+id/button_6"
-                android:layout_width="0dp"
-                android:layout_height="150dp"
-                android:layout_weight="1"
-                android:background="@drawable/picture_2"
-                android:drawablePadding="16dp"
-                android:gravity="bottom|center_horizontal"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="30dp"
-                android:layout_marginBottom="30dp"
-                android:text="@string/string_10"
-                android:textSize="12sp" />
-            <Button
-                android:id="@+id/button_7"
-                android:layout_width="0dp"
-                android:layout_height="150dp"
-                android:layout_weight="1"
-                android:background="@drawable/picture_2"
-                android:drawablePadding="16dp"
-                android:gravity="bottom|center_horizontal"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="30dp"
-                android:layout_marginBottom="30dp"
-                android:text="@string/string_10"
-                android:layout_marginEnd="20dp"
-                android:textSize="12sp" />
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <Button
-                android:id="@+id/button_8"
-                android:layout_width="0dp"
-                android:layout_height="150dp"
-                android:layout_weight="1"
-                android:background="@drawable/picture_2"
-                android:drawablePadding="16dp"
-                android:gravity="bottom|center_horizontal"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="30dp"
-                android:layout_marginBottom="30dp"
-                android:text="@string/string_10"
-                android:textSize="12sp" />
-            <Button
-                android:id="@+id/button_9"
-                android:layout_width="0dp"
-                android:layout_height="150dp"
-                android:layout_weight="1"
-                android:background="@drawable/picture_2"
-                android:drawablePadding="16dp"
-                android:gravity="bottom|center_horizontal"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="30dp"
-                android:layout_marginBottom="30dp"
-                android:text="@string/string_10"
-                android:textSize="12sp" />
-            <Button
-                android:id="@+id/button_10"
-                android:layout_width="0dp"
-                android:layout_height="150dp"
-                android:layout_weight="1"
-                android:background="@drawable/picture_2"
-                android:drawablePadding="16dp"
-                android:gravity="bottom|center_horizontal"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="30dp"
-                android:layout_marginBottom="30dp"
-                android:text="@string/string_10"
-                android:layout_marginEnd="20dp"
-                android:textSize="12sp" />
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <Button
-                android:id="@+id/button_11"
-                android:layout_width="0dp"
-                android:layout_height="150dp"
-                android:layout_weight="1"
-                android:background="@drawable/picture_2"
-                android:drawablePadding="16dp"
-                android:gravity="bottom|center_horizontal"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="30dp"
-                android:layout_marginBottom="30dp"
-                android:text="@string/string_10"
-                android:textSize="12sp" />
-            <Button
-                android:id="@+id/button_12"
-                android:layout_width="0dp"
-                android:layout_height="150dp"
-                android:layout_weight="1"
-                android:background="@drawable/picture_2"
-                android:drawablePadding="16dp"
-                android:gravity="bottom|center_horizontal"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="30dp"
-                android:layout_marginBottom="30dp"
-                android:text="@string/string_10"
-                android:textSize="12sp" />
-            <Button
-                android:id="@+id/button_13"
-                android:layout_width="0dp"
-                android:layout_height="150dp"
-                android:layout_weight="1"
-                android:background="@drawable/picture_2"
-                android:drawablePadding="16dp"
-                android:gravity="bottom|center_horizontal"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="30dp"
-                android:layout_marginBottom="30dp"
-                android:text="@string/string_10"
-                android:layout_marginEnd="20dp"
-                android:textSize="12sp" />
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <Button
-                android:id="@+id/button_14"
-                android:layout_width="0dp"
-                android:layout_height="150dp"
-                android:layout_weight="1"
-                android:background="@drawable/picture_2"
-                android:drawablePadding="16dp"
-                android:gravity="bottom|center_horizontal"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="30dp"
-                android:layout_marginBottom="30dp"
-                android:text="@string/string_10"
-                android:textSize="12sp" />
-            <Button
-                android:id="@+id/button_15"
-                android:layout_width="0dp"
-                android:layout_height="150dp"
-                android:layout_weight="1"
-                android:background="@drawable/picture_2"
-                android:drawablePadding="16dp"
-                android:gravity="bottom|center_horizontal"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="30dp"
-                android:layout_marginBottom="30dp"
-                android:text="@string/string_10"
-                android:textSize="12sp" />
-            <Button
-                android:id="@+id/button_16"
-                android:layout_width="0dp"
-                android:layout_height="150dp"
-                android:layout_weight="1"
-                android:background="@drawable/picture_2"
-                android:drawablePadding="16dp"
-                android:gravity="bottom|center_horizontal"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="30dp"
-                android:layout_marginBottom="30dp"
-                android:text="@string/string_10"
-                android:layout_marginEnd="20dp"
-                android:textSize="12sp" />
-
-        </LinearLayout>
-
-
+            android:layout_height="match_parent"
+            android:padding="8dp"
+            tools:listitem="@layout/item_book" />
     </LinearLayout>
 </ScrollView>
